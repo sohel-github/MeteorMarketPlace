@@ -1,0 +1,32 @@
+<template name="profile">
+  <div class="panel panel-info">
+    <div class="panel-heading"><b>{{currentUser.profile.firstname}} {{currentUser.profile.lastname}}</b> Profile</div>
+    <div class="panel-body">
+      <div class="form-group" id="user-img">
+        <img src="{{currentUser.profile.avatar}}" alt="Avatar" class="img-responsive img-circle avatar-upload" />
+      </div>
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Email" value="{{currentUser.profile.email}}">
+      </div>
+      <div class="form-group">
+        <label for="">First Name</label>
+        <input type="text" class="form-control" name="firstname" placeholder="First Name" value="{{currentUser.profile.firstname}}">
+      </div>
+      <div class="form-group">
+        <label for="">Last Name</label>
+        <input type="text" class="form-control" name="lastname" placeholder="Last Name" value="{{currentUser.profile.lastname}}">
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="text" class="form-control" name="password" placeholder="Password" value="{{currentUser.profile.password}}">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">Browse ...</label>
+        <input type="file" accept=".gif,.png,.jpg,.jpeg" class="myFileInput" id="avatar">
+        <p class="help-block">Upload Profile Image</p>
+      </div>
+      <button type="submit" class="btn btn-info btn-block">Update</button>
+    </div>
+  </div>
+</template>
